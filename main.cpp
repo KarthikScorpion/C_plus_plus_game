@@ -3,7 +3,7 @@
 using namespace std;
 // FOREVER VARIABLES DO NOT CHANGE!!
 enum eDir {STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5, DOWNRIGHT = 6};
-// Class "cBall", contains core code for the ball, contains functions for the screen and ball
+// Class "cBall", contains core code for the ball.
 class cBall
 {
 private:
@@ -72,6 +72,7 @@ public:
 		return o;
 	}
 };
+// Class cPaddle is the core class for the paddles contains, code for paddle
 class cPaddle
 {
 private:
@@ -118,3 +119,4 @@ int main()
 
 	return 0;
 }
+// Hope you liked the game, and again special shout out to 'NVitanovic'.
