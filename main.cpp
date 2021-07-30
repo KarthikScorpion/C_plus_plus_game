@@ -123,7 +123,7 @@ public:
 		return o;
 	}
 };
-// This is the cGameManger class, !! IMPORTANT DO NOT CHANGE, IS RESPONSIBLE FOR ALL FUNCTION BEING CALLED!!
+// This is the cGameManger class, !! IMPORTANT DO NOT CHANGE, IS RESPONSIBLE FOR ALL FUNCTIONS BEING CALLED!!
 class cGameManger
 {
 private:
@@ -166,18 +166,45 @@ public:
 		player1->Reset();
 		player2->Reset();
 	}
+	// Draw function. !! IMPORTANT DO NOT CHANGE THE X AND Y CORDINATES, THESE ARE CORE FUNCTIONS !!
 	void Draw()
 	{
 		system("cls");
 		for (int i = 0; i < width + 2; i++)
 			cout << "#";
-		
+		cout << endl;
+
+		for(int i = 0; i < height; i++)
+		{
+			for (int j = 0; j < width; j++)
+			{
+				int ballx = ball->getX();
+				int bally = ball->getY();
+				int player1x = player1->getX();
+				int player2x = player2->getX();
+				int player1y = player1->getY();
+				int player2y = player2->getY(); 
+
+				if (j == 0)
+					cout << "#";
+				if (ballx = j && bally == i)
+					cout << "O";
+				else if (player1x == j && player1y == i)
+					cout << "#"; // Player 1 paddle 
+
+				if (j == width -1)
+					cout << "#";	
+			}
+
+		}
+
 		for (int i = 0; i < width + 2; i++)
 			cout << "#";
+		cout << endl;
 
 	}
 };
-// Main loop
+// Main loop, !! IMPORTANT DO NOT CHANGE, IF CHANGED, THE FUNCTIONS WILL NOT BE TAKEN INTO ACCOUT BY THE SYSTEM !!
 int main()
 {
 	cGameManger c(40, 20);
